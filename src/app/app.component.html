@@ -1,5 +1,6 @@
 {{title}}
 <h1>This is the first app routing</h1>
+<p>Random number from child component:{{randomNumber || 'Not yet generated'}}
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
@@ -16,12 +17,18 @@
       </ul>
     </div>
   </div>
+  <!-- <div class="row">
+    <div class="col-sm-12">
+      <router-outlet  ></router-outlet>
+    </div>
+  </div> -->
   <div class="row">
     <div class="col-sm-12">
-      <router-outlet></router-outlet>
+      <app-home [subjectChild]="subjectParent"
+       (numberGen1)="onNumberGenerated($event)"></app-home>
     </div>
   </div>
-  <!-- <div class="row">
+  <div class="row">
     <div class="col-sm-12">
       <app-contactme></app-contactme>
     </div>
@@ -30,4 +37,4 @@
     <div class="col-sm-12">
       <app-aboutme></app-aboutme>
     </div>
-  </div> -->
+  </div>

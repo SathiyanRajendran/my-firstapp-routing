@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,5 +15,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  @Input() subjectChild: any;
+  @Output() private numberGen1=new EventEmitter<number>();
+  public genNumber(){
+    const randomNumber=Math.random();
+    this.numberGen1.emit(randomNumber);
+  }
 }
