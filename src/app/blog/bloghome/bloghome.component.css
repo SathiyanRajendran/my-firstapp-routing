@@ -1,0 +1,16 @@
+.vertical-menu{
+  width: 200px;
+}
+
+.vertical-menu{
+  background-color: aqua;
+  color: brown;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+   /* remove underline from links */
+}
+
+.vertical-menu{
+  background-color:chartreuse;
+}
